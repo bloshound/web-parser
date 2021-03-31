@@ -8,7 +8,10 @@ import java.io.IOException;
 public class App {
     public static void main(String[] args) throws IOException {
 
-        HtmlDownloader htmlDownloader = new HtmlDownloader("https://google.com");
-        htmlDownloader.downloadHtml();
+        HTMLDownloader htmlDownloader = new HTMLDownloader("https://www.simbirsoft.com/portfolio/");
+        String dawnloadedHtml = htmlDownloader.downloadHtml();
+
+
+
     }
 }
