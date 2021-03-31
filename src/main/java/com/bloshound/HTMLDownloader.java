@@ -1,6 +1,7 @@
 package com.bloshound;
 
 import java.io.IOException;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
@@ -10,9 +11,9 @@ import java.nio.file.StandardCopyOption;
 import java.util.logging.Logger;
 
 public class HTMLDownloader {
+    private static final Logger logger = Logger.getLogger(HTMLDownloader.class.getName());
 
     public static final String downloadedDirPathName = ".\\downloaded";
-    private static final Logger logger = Logger.getLogger(HTMLDownloader.class.getName());
     private URL url;
 
     public HTMLDownloader(String input) throws MalformedURLException {
@@ -30,4 +31,6 @@ public class HTMLDownloader {
 
         return downloadedSitePath.toString();
     }
+
+
 }
